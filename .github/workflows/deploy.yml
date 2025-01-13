@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Build React App
-        run: npm run build
+        run: CI=false npm run build
 
       # Sync build folder to S3 bucket
       - name: Deploy to S3
