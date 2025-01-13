@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { ReactNode, useEffect, useState } from 'react'
 import { quiz } from '../data/QuizQuestions'
 import { QuizContextTypes, Result, ScreenTypes } from '../types'
