@@ -187,7 +187,7 @@ const ResultScreen: FC = () => {
       </InnerContainer>
       <Flex flxEnd>
         <Button
-          text="RETRY"
+          text="REINTENTAR"
           onClick={onClickRetry}
           icon={<Refresh />}
           iconPosition="left"

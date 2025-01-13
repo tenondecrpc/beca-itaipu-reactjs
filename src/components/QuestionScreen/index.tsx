@@ -160,7 +160,7 @@ const QuestionScreen: FC = () => {
         />
         <ButtonWrapper>
           <Button
-            text={activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+            text={activeQuestion === questions.length - 1 ? 'Terminar' : 'Siguiente'}
             onClick={onClickNext}
             icon={<Next />}
             iconPosition="right"
@@ -171,11 +171,11 @@ const QuestionScreen: FC = () => {
       {/* timer or finish quiz modal*/}
       {(showTimerModal || showResultModal) && (
         <ModalWrapper
-          title={showResultModal ? 'Done!' : 'Your time is up!'}
-          subtitle={`You have attempted ${result.length} questions in total.`}
+          title={showResultModal ? 'Listo!' : 'Tu tiempo se acabó!'}
+          subtitle={`Tu has respondido ${result.length} preguntas en total.`}
           onClick={handleModal}
           icon={showResultModal ? <CheckIcon /> : <TimerIcon />}
-          buttonTitle="SHOW RESULT"
+          buttonTitle="VER RESULTADOS"
         />
       )}
     </PageCenter>

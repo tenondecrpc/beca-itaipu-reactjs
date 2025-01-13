@@ -50,28 +50,27 @@ const QuizDetailsScreen = () => {
         <LogoContainer>
           <AppLogo />
         </LogoContainer>
-        <AppTitle>XEVEN QUIZ</AppTitle>
+        <AppTitle>BECA ITAIPU</AppTitle>
         <DetailTextContainer>
           <DetailText>
-            Selected Quiz Topic: <HighlightedText>{selectedQuizTopic}</HighlightedText>
+            Simulación seleccionada: <HighlightedText>{selectedQuizTopic}</HighlightedText>
           </DetailText>
           <DetailText>
-            Total questions to attempt:{' '}
+            Total de preguntas a intentar:{' '}
             <HighlightedText>{totalQuestions}</HighlightedText>
           </DetailText>
           <DetailText>
-            Score in total: <HighlightedText>{totalScore}</HighlightedText>
+            Puntos en total: <HighlightedText>{totalScore}</HighlightedText>
           </DetailText>
           <DetailText>
-            Total time: <HighlightedText>{convertSeconds(totalTime)}</HighlightedText>
+            Tiempo límite: <HighlightedText>{convertSeconds(totalTime)}</HighlightedText>
           </DetailText>
           <DetailText>
-            To save time, you can skip questions. Skipped questions will show up at the
-            end of the quiz.
+          Para ahorrar tiempo, puedes omitir preguntas. Las preguntas omitidas aparecerán al final del cuestionario.
           </DetailText>
         </DetailTextContainer>
         <Button
-          text="Start"
+          text="Iniciar"
           icon={<StartIcon />}
           iconPosition="left"
           onClick={goToQuestionScreen}

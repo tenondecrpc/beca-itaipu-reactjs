@@ -66,6 +66,8 @@ const SelectButton = styled.div<SelectButtonProps>`
     tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
   }
+    height: 14px
+    weight: 14px
 `
 
 const SelectButtonText = styled.span`
@@ -92,9 +94,9 @@ const QuizTopicsScreen: React.FC = () => {
           <AppLogo />
         </LogoContainer>
         <Heading>
-          WELCOME TO <HighlightedText> XEVEN QUIZ</HighlightedText>
+          BIENVENIDO A <HighlightedText> SIMULACIÓN BECA ITAIPU</HighlightedText>
         </Heading>
-        <DetailText>Select topic below to start your Quiz.</DetailText>
+        <DetailText>Selecciona el tema a continuación para iniciar la simulación</DetailText>
         <SelectButtonContainer>
           {quizTopics.map(({ title, icon, disabled }) => (
             <SelectButton
@@ -108,7 +110,7 @@ const QuizTopicsScreen: React.FC = () => {
             </SelectButton>
           ))}
         </SelectButtonContainer>
-        <Button text="Continue" onClick={goToQuizDetailsScreen} bold />
+        <Button text="Continuar" onClick={goToQuizDetailsScreen} bold />
       </CenterCardContainer>
     </PageCenter>
   )

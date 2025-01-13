@@ -19,7 +19,7 @@ const RightAnswerContainer = styled.p`
 const RightAnswer: FC<RightAnswerProps> = ({ correctAnswers, choices }) => {
   return (
     <RightAnswerContainer>
-      {`Right ${correctAnswers.length < 2 ? 'Answer' : 'Answers'}: `}
+      {`${correctAnswers.length < 2 ? 'Respuesta correcta' : 'Respuestas correctas'}: `}
       {correctAnswers.map((item: string, index: number) => {
         const label = String.fromCharCode(65 + choices.indexOf(item))
 

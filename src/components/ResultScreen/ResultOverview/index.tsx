@@ -35,24 +35,24 @@ const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
 
   // Passed if 60 or more than 60% marks
   const calculateStatus =
-    (obtainedScore / quizDetails.totalScore) * 100 >= 60 ? 'Passed' : 'Failed'
+    (obtainedScore / quizDetails.totalScore) * 100 >= 60 ? 'Logrado' : 'Fallido'
 
   return (
     <ResultOverviewStyle>
       <p>
-        You attempted questions:{' '}
+        Tu respondiste:{' '}
         <HighlightedText> {totalQuestionAttempted} </HighlightedText>/{' '}
         {quizDetails.totalQuestions}
       </p>
       <p>
-        Score secured:<HighlightedText> {obtainedScore} </HighlightedText>/{' '}
+        Puntuación lograda:<HighlightedText> {obtainedScore} </HighlightedText>/{' '}
         {quizDetails.totalScore}
       </p>
       <p>
-        Time Spent:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
+        Tiemplo empleado:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
       </p>
       <p>
-        Status:<HighlightedText> {calculateStatus}</HighlightedText>
+        Estado:<HighlightedText> {calculateStatus}</HighlightedText>
       </p>
     </ResultOverviewStyle>
   )
