@@ -179,7 +179,7 @@ const ResultScreen: FC = () => {
                     )}
                   </div>
                 </ResizableBox>
-                <Score right={isMatch}>{`Score ${isMatch ? score : 0}`}</Score>
+                <Score right={isMatch}>{`Puntaje ${isMatch ? score : 0}`}</Score>
               </QuestionContainer>
             )
           }
