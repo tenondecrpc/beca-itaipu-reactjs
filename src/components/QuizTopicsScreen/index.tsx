@@ -94,7 +94,7 @@ const QuizTopicsScreen: React.FC = () => {
           <AppLogo />
         </LogoContainer>
         <Heading>
-          BIENVENIDO A <HighlightedText> SIMULACIÓN BECA ITAIPU</HighlightedText>
+          BIENVENIDO A <HighlightedText> SIMULACIÓN BECAS ITAIPU</HighlightedText>
         </Heading>
         <DetailText>Selecciona el tema a continuación para iniciar la simulación</DetailText>
         <SelectButtonContainer>

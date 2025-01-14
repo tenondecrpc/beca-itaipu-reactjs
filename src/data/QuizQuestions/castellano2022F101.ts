@@ -40,7 +40,7 @@ export const castellano2022F101: Topic = {
       score: 10,
     },
     {
-      question: `23.En el párrafo "En 1944 viajó a Gran Bretaña, con una Invitación del Consejo
+      question: `23. En el párrafo "En 1944 viajó a Gran Bretaña, con una Invitación del Consejo
                   Británico, y trabajó alli como corresponsal para su periódico" a través de la
                   palabra subrayada se establece la relación de referencia denominada:`,
       code: roaBastos,
@@ -63,7 +63,7 @@ export const castellano2022F101: Topic = {
       score: 10,
     },
     {
-      question: '25.La declaración antigubernamental de Roa Bastos según el texto se manifiesta',
+      question: '25. La declaración antigubernamental de Roa Bastos según el texto se manifiesta',
       code: roaBastos,
       choices: [
         '1944', 

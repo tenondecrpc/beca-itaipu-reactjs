@@ -23,9 +23,19 @@ const AnswersContainer = styled.div`
   }
 `
 
-const QuestionStyle = styled.h2`
+const QuestionStyle = styled.h3`
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  color: ${({ theme }) => theme.colors.primaryText};
+  line-height: 1.3;
+`
+
+const TitleStyle = styled.h2`
   font-size: clamp(18px, 4vw, 28px);
   font-weight: 500;
+  margin-top: 30px;
   margin-bottom: 25px;
   color: ${({ theme }) => theme.colors.primaryText};
   line-height: 1.3;
@@ -52,11 +62,12 @@ const Question: FC<QuestionTypes> = ({
 }) => {
   return (
     <QuestionContainer>
-      <QuestionStyle>{question}</QuestionStyle>
+      <TitleStyle>Texto referencial usado para la pregunta de abajo</TitleStyle>
       {/* if question contains code snippet then show code */}
       {code && <CodeSnippet code={code} language="javascript" />}
       {/* if question contains an image */}
       {image && <QuizImage image={image} />}
+      <QuestionStyle>{question}</QuestionStyle>
       <AnswersContainer>
         {choices.map((choice, index) => (
           <Answer

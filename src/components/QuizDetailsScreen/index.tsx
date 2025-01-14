@@ -50,7 +50,7 @@ const QuizDetailsScreen = () => {
         <LogoContainer>
           <AppLogo />
         </LogoContainer>
-        <AppTitle>BECA ITAIPU</AppTitle>
+        <AppTitle>BECAS ITAIPU</AppTitle>
         <DetailTextContainer>
           <DetailText>
             Simulación seleccionada: <HighlightedText>{selectedQuizTopic}</HighlightedText>
