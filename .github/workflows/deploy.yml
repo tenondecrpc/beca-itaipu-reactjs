@@ -38,7 +38,7 @@ jobs:
 
       # Deploy to S3 bucket
       - name: Deploy to S3
-        run: aws s3 sync build s3://beca-itaipu-2025 --delete --debug
+        run: aws s3 sync build ${{ secrets.S3_BUCKET_NAME }} --delete
 
       # Invalidate CloudFront cache
       - name: Invalidate CloudFront
