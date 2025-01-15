@@ -2,7 +2,6 @@ import { FC } from 'react'
 import styled from 'styled-components'
 
 import { device } from '../../../styles/BreakPoints'
-
 import CodeSnippet from '../../ui/CodeSnippet'
 import Answer from '../Answer'
 import QuizImage from '../../ui/QuizImage'
@@ -62,10 +61,8 @@ const Question: FC<QuestionTypes> = ({
 }) => {
   return (
     <QuestionContainer>
-      <TitleStyle>Texto referencial usado para la pregunta de abajo</TitleStyle>
-      {/* if question contains code snippet then show code */}
+      {code && <TitleStyle>Texto referencial usado para la pregunta de abajo</TitleStyle>}
       {code && <CodeSnippet code={code} language="javascript" />}
-      {/* if question contains an image */}
       {image && <QuizImage image={image} />}
       <QuestionStyle>{question}</QuestionStyle>
       <AnswersContainer>

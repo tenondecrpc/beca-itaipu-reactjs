@@ -1,8 +1,5 @@
-import { generalKnowledge } from './generalKnowledge'
-import { javascript } from './javascript'
-import { python } from './python'
-import { react } from './react'
 import { castellano2022F101 } from './castellano2022F101'
+import { castellano2022F102 } from './castellano2022F102'
 
 // Question Types
 // 1. MCQs | Multiple Choice | single
@@ -32,9 +29,6 @@ export type Topic = {
 }
 
 export const quiz: Record<string, Topic> = {
-  JavaScript: javascript,
-  React: react,
-  Python: python,
-  'General Knowledge': generalKnowledge,
-  'Castellano 2022 F1 01': castellano2022F101
+  'Castellano 2022 F1 01': castellano2022F101,
+  'Castellano 2022 F1 02': castellano2022F102
 }

@@ -10,11 +10,11 @@ export const castellano2022F101: Topic = {
   topic: 'Castellano2022F101',
   level: 'Beginner',
   totalQuestions: 10,
-  totalScore: 100,
+  totalScore: 10,
   totalTime: 1200,
   questions: [
     {
-      question: '21. El sinónimo contextual de la palabra "INSPIRACIÓN" es:',
+      question: '(21) El sinónimo contextual de la palabra "INSPIRACIÓN" es:',
       code: roaBastos,
       choices: [
         'Iluminación', 
@@ -24,10 +24,10 @@ export const castellano2022F101: Topic = {
       ],
       type: 'MCQs',
       correctAnswers: ['Iluminación'],
-      score: 10,
+      score: 1,
     },
     {
-      question: '22. El párrafo que contiene error de concordancia es el número:',
+      question: '(22) El párrafo que contiene error de concordancia es el número:',
       code: roaBastos,
       choices: [
         'Dos', 
@@ -37,20 +37,20 @@ export const castellano2022F101: Topic = {
       ],
       type: 'MCQs',
       correctAnswers: ['Uno'],
-      score: 10,
+      score: 1,
     },
     {
-      question: `23. En el párrafo "En 1944 viajó a Gran Bretaña, con una Invitación del Consejo
+      question: `(23) En el párrafo "En 1944 viajó a Gran Bretaña, con una Invitación del Consejo
                   Británico, y trabajó alli como corresponsal para su periódico" a través de la
                   palabra subrayada se establece la relación de referencia denominada:`,
       code: roaBastos,
       choices: ['Anáfora', 'Elipsis', 'Catáfora', 'Exofórica'],
       type: 'MCQs',
       correctAnswers: ['Anáfora'],
-      score: 10,
+      score: 1,
     },
     {
-      question: '24. El hecho que generó el exilio de Augusto Roa Bastos fue:',
+      question: '(24) El hecho que generó el exilio de Augusto Roa Bastos fue:',
       code: roaBastos,
       choices: [
         'La publicación de obras', 
@@ -60,10 +60,10 @@ export const castellano2022F101: Topic = {
       ],
       type: 'MCQs',
       correctAnswers: ['La orden de su arresto'],
-      score: 10,
+      score: 1,
     },
     {
-      question: '25. La declaración antigubernamental de Roa Bastos según el texto se manifiesta',
+      question: '(25) La declaración antigubernamental de Roa Bastos según el texto se manifiesta',
       code: roaBastos,
       choices: [
         '1944', 
@@ -73,10 +73,10 @@ export const castellano2022F101: Topic = {
       ],
       type: 'MCQs',
       correctAnswers: ['1985'],
-      score: 10,
+      score: 1,
     },
     {
-      question: '26. La tipología textual a la que pertenece la lectura es:',
+      question: '(26) La tipología textual a la que pertenece la lectura es:',
       code: roaBastos,
       choices: [
         'Informativa',
@@ -84,13 +84,12 @@ export const castellano2022F101: Topic = {
         'Instruccional',
         'Instrumental',
       ],
-
       type: 'MCQs',
       correctAnswers: ['Informativa'],
-      score: 10,
+      score: 1,
     },
     {
-      question: `27. La expresión "En noviembre de 1989 recibió el Premio Cervantes, máximo
+      question: `(27) La expresión "En noviembre de 1989 recibió el Premio Cervantes, máximo
                 reconocimiento a la labor creadora de escritores españoles
                 e hispanoamericanos" desempeña la función del lenguaje denominada:`,
       code: roaBastos,
@@ -103,10 +102,10 @@ export const castellano2022F101: Topic = {
 
       type: 'MCQs',
       correctAnswers: ['Referencial o Informativa'],
-      score: 10,
+      score: 1,
     },
     {
-      question: '28. El texto está estructurado en:',
+      question: '(28) El texto está estructurado en:',
       code: roaBastos,
       choices: [
         'Prosa y verso',
@@ -117,10 +116,10 @@ export const castellano2022F101: Topic = {
 
       type: 'MCQs',
       correctAnswers: ['Solo en prosa'],
-      score: 10,
+      score: 1,
     },
     {
-      question: '29. La letra que contiene error ortográfico es:',
+      question: '(29) La letra que contiene error ortográfico es:',
       code: roaBastos,
       choices: [
         'Corregir, corrijo, enhebrar, decisión',
@@ -131,10 +130,10 @@ export const castellano2022F101: Topic = {
 
       type: 'MCQs',
       correctAnswers: ['Ebilla, exibición, escéntrico, bendaje'],
-      score: 10,
+      score: 1,
     },
     {
-      question: '30. La opción que contiene palabras con HIATO es:',
+      question: '(30) La opción que contiene palabras con HIATO es:',
       code: roaBastos,
       choices: [
         'Púa, cohesión, caer',
@@ -145,7 +144,7 @@ export const castellano2022F101: Topic = {
 
       type: 'MCQs',
       correctAnswers: ['Púa, cohesión, caer'],
-      score: 10,
+      score: 1,
     },
   ],
 }

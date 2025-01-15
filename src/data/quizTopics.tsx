@@ -12,5 +12,8 @@ export const quizTopics: QuizTopic[] = [
     title: 'Castellano 2022 F1 01',
     icon: <BecaIcon />,
   },
-
+  {
+    title: 'Castellano 2022 F1 02',
+    icon: <BecaIcon />,
+  },
 ]
