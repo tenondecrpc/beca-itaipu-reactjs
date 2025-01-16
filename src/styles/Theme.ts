@@ -33,6 +33,10 @@ export const themes: Record<string, Theme> = {
       darkGray: '#9fa3a9',
       darkerGray: '#817a8e',
       themeColorLight: '#FFC0CB',
+      error: '#FF0000',
+      primaryHover: '#FFC0CB',
+      textPrimary: '#333333'
+
     },
     fonts: {
       anekMalayalam: 'Anek Malayalam',
@@ -80,6 +84,10 @@ export const themes: Record<string, Theme> = {
       darkerGray: '#817a8e',
       themeColorLight: '#FFC0CB',
       text: '#11052C',
+      error: '#FF0000',
+      primaryHover: '#FFC0CB',
+      textPrimary: '#333333'
+
     },
     fonts: {
       anekMalayalam: 'Anek Malayalam',

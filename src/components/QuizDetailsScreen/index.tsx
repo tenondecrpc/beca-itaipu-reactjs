@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { AppLogo, StartIcon } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
@@ -12,6 +12,16 @@ import { ScreenTypes } from '../../types'
 import { convertSeconds } from '../../utils/helpers'
 
 import Button from '../ui/Button'
+
+// Animación para emojis
+const bounce = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+`
 
 const AppTitle = styled.h2`
   font-weight: 700;
@@ -35,10 +45,26 @@ const DetailItem = styled.div`
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.themeColorLight};
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
 `
 
 const Emoji = styled.span`
   font-size: 24px;
+  transition: transform 0.3s;
+
+  ${DetailItem}:hover & {
+    transform: scale(1.2) rotate(10deg);
+    animation: ${bounce} 1.5s infinite;
+  }
 `
 
 const DetailText = styled.p`
@@ -47,6 +73,11 @@ const DetailText = styled.p`
   line-height: 1.4;
   margin: 0;
   color: ${({ theme }) => theme.colors.text};
+  transition: color 0.3s;
+
+  ${DetailItem}:hover & {
+    color: ${({ theme }) => theme.colors.themeColor};
+  }
 `
 
 const QuizDetailsScreen = () => {
@@ -90,7 +121,6 @@ const QuizDetailsScreen = () => {
               Tiempo límite: <HighlightedText>{convertSeconds(totalTime)}</HighlightedText>
             </DetailText>
           </DetailItem>
-
         </DetailTextContainer>
         <Button
           text="Iniciar"

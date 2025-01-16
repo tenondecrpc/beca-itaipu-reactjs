@@ -33,6 +33,9 @@ export interface Theme {
     darkerGray: string
     themeColorLight: string
     text: string
+    error: string
+    primaryHover: string
+    textPrimary: string
   }
   fonts: {
     anekMalayalam: string

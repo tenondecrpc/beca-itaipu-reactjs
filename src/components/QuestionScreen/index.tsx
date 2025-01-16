@@ -13,6 +13,83 @@ import ModalWrapper from '../ui/ModalWrapper'
 import Question from './Question'
 import QuizHeader from './QuizHeader'
 
+
+// Contenedor principal del modal
+const ModalContainer = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: ${({ theme }) => theme.colors.cardBackground || '#ffffff'};
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -55%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+`;
+
+// Icono del modal
+const ModalIcon = styled.div<{ isSuccess: boolean }>`
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: ${({ theme, isSuccess }) =>
+    isSuccess ? theme.colors.success || '#4CAF50' : theme.colors.error || '#F44336'};
+`;
+// Título del modal
+const ModalTitle = styled.h2`
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: ${({ theme }) => theme.colors.primaryText || '#000000'};
+`;
+
+// Subtítulo del modal
+const ModalSubtitle = styled.p`
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: ${({ theme }) => theme.colors.secondaryText || '#666666'};
+`;
+
+// Botón del modal
+const ModalButton = styled.button`
+  background: ${({ theme }) => theme.colors.primaryText || '#007BFF'};
+  color: ${({ theme }) => theme.colors.buttonText || '#ffffff'};
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primaryHover || '#0056b3'};
+  }
+`;
+
+// Fondo oscuro al abrir el modal
+const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(196, 21, 62, 0.5);
+  z-index: 999;
+`;
+
 const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
   width: 900px;
   min-height: 500px;
@@ -30,7 +107,7 @@ const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
       svg {
         path {
           fill: ${({ selectedAnswer, theme }) =>
-            selectedAnswer ? `${theme.colors.buttonText}` : `${theme.colors.darkGray}`};
+    selectedAnswer ? `${theme.colors.buttonText}` : `${theme.colors.darkGray}`};
         }
       }
     }
@@ -170,13 +247,21 @@ const QuestionScreen: FC = () => {
       </QuizContainer>
       {/* timer or finish quiz modal*/}
       {(showTimerModal || showResultModal) && (
-        <ModalWrapper
-          title={showResultModal ? 'Listo!' : 'Tu tiempo se acabó!'}
-          subtitle={`Tu has respondido ${result.length} preguntas en total.`}
-          onClick={handleModal}
-          icon={showResultModal ? <CheckIcon /> : <TimerIcon />}
-          buttonTitle="VER RESULTADOS"
-        />
+        <>
+          <Backdrop />
+          <ModalContainer>
+            <ModalIcon isSuccess={showResultModal}>
+              {showResultModal ? <CheckIcon /> : <TimerIcon />}
+            </ModalIcon>
+            <ModalTitle>
+              {showResultModal ? '¡Listo!' : '¡Tu tiempo se acabó!'}
+            </ModalTitle>
+            <ModalSubtitle>
+              {`Has respondido ${result.length} preguntas en total.`}
+            </ModalSubtitle>
+            <ModalButton onClick={handleModal}>VER RESULTADOS</ModalButton>
+          </ModalContainer>
+        </>
       )}
     </PageCenter>
   )
