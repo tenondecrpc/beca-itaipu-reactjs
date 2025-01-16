@@ -15,8 +15,10 @@ import Button from '../ui/Button'
 
 const AppTitle = styled.h2`
   font-weight: 700;
-  font-size: 32px;
+  font-size: 36px;
+  text-align: center;
   color: ${({ theme }) => theme.colors.themeColor};
+  margin-bottom: 20px;
 `
 
 const DetailTextContainer = styled.div`
@@ -28,11 +30,23 @@ const DetailTextContainer = styled.div`
   max-width: 500px;
 `
 
+const DetailItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+`
+
+const Emoji = styled.span`
+  font-size: 24px;
+`
+
 const DetailText = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  margin-top: 15px;
-  line-height: 1.3;
+  line-height: 1.4;
+  margin: 0;
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const QuizDetailsScreen = () => {
@@ -52,22 +66,31 @@ const QuizDetailsScreen = () => {
         </LogoContainer>
         <AppTitle>BECAS ITAIPU</AppTitle>
         <DetailTextContainer>
-          <DetailText>
-            Simulación seleccionada: <HighlightedText>{selectedQuizTopic}</HighlightedText>
-          </DetailText>
-          <DetailText>
-            Total de preguntas a intentar:{' '}
-            <HighlightedText>{totalQuestions}</HighlightedText>
-          </DetailText>
-          <DetailText>
-            Puntos en total: <HighlightedText>{totalScore}</HighlightedText>
-          </DetailText>
-          <DetailText>
-            Tiempo límite: <HighlightedText>{convertSeconds(totalTime)}</HighlightedText>
-          </DetailText>
-          <DetailText>
-          Para ahorrar tiempo, puedes omitir preguntas. Las preguntas omitidas aparecerán al final del cuestionario.
-          </DetailText>
+          <DetailItem>
+            <Emoji>📚</Emoji>
+            <DetailText>
+              Simulación de: <HighlightedText>{selectedQuizTopic}</HighlightedText>
+            </DetailText>
+          </DetailItem>
+          <DetailItem>
+            <Emoji>❓</Emoji>
+            <DetailText>
+              Total de preguntas a intentar: <HighlightedText>{totalQuestions}</HighlightedText>
+            </DetailText>
+          </DetailItem>
+          <DetailItem>
+            <Emoji>🏆</Emoji>
+            <DetailText>
+              Puntos en total: <HighlightedText>{totalScore}</HighlightedText>
+            </DetailText>
+          </DetailItem>
+          <DetailItem>
+            <Emoji>⏳</Emoji>
+            <DetailText>
+              Tiempo límite: <HighlightedText>{convertSeconds(totalTime)}</HighlightedText>
+            </DetailText>
+          </DetailItem>
+
         </DetailTextContainer>
         <Button
           text="Iniciar"

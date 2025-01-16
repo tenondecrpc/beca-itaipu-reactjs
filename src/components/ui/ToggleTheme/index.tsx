@@ -101,15 +101,15 @@ const ToggleTheme: FC<ToggleThemeProps> = ({
 }) => {
   return (
     <ToggleLabel htmlFor={id}>
-      Modo:
-      <ToggleInput
+      {/* Modo: */}
+      {/* <ToggleInput
         type="checkbox"
         id={id}
         onChange={onChange}
         value={value}
         checked={checked}
-      />
-      <Ball>{currentTheme === 'light' ? <Sun /> : <Moon />}</Ball>
+      /> */}
+      {/* <Ball>{currentTheme === 'light' ? <Sun /> : <Moon />}</Ball> */}
     </ToggleLabel>
   )
 }

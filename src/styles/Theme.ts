@@ -7,6 +7,7 @@ export const themes: Record<string, Theme> = {
       secondaryText: '#2D264B', // answer text color
       themeText: '#000000',
       themeColor: '#800080',
+      text: '#11052C',
       themeGradient: 'linear-gradient(to right,#800080, #FFC0CB)',
       background: '#E5E5E5',
       cardBackground: '#FFFFFF',
@@ -31,6 +32,7 @@ export const themes: Record<string, Theme> = {
       dark: '#282526',
       darkGray: '#9fa3a9',
       darkerGray: '#817a8e',
+      themeColorLight: '#FFC0CB',
     },
     fonts: {
       anekMalayalam: 'Anek Malayalam',
@@ -76,6 +78,8 @@ export const themes: Record<string, Theme> = {
       dark: '#282526',
       darkGray: '#9fa3a9',
       darkerGray: '#817a8e',
+      themeColorLight: '#FFC0CB',
+      text: '#11052C',
     },
     fonts: {
       anekMalayalam: 'Anek Malayalam',

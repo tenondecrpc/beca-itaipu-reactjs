@@ -15,10 +15,14 @@ import { ScreenTypes } from '../../types'
 import Button from '../ui/Button'
 
 const Heading = styled.h2`
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 800;
   margin-bottom: 20px;
   text-align: center;
+  background: linear-gradient(90deg, #4a90e2, #9013fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 `
 
 const DetailText = styled.p`
@@ -26,19 +30,27 @@ const DetailText = styled.p`
   font-size: 20px;
   line-height: 29px;
   text-align: center;
+  color: #666;
+  animation: fadeIn 0.8s ease-in-out;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `
 
 const SelectButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 60%;
-  gap: 30px;
-  margin-top: 40px;
-  margin-bottom: 45px;
+  max-width: 80%;
+  gap: 20px;
+  margin: 40px auto 45px auto;
   @media ${device.md} {
-    row-gap: 20px;
-    column-gap: 20px;
+    gap: 15px;
     max-width: 100%;
   }
 `
@@ -49,36 +61,41 @@ interface SelectButtonProps {
 }
 
 const SelectButton = styled.div<SelectButtonProps>`
-  background-color: ${({ disabled, theme }) =>
-    disabled ? `${theme.colors.disabledCard}` : `${theme.colors.selectTopicBg}`};
-  border: ${({ active, theme }) =>
+background: ${({ disabled, theme }) =>
+    disabled ? theme.colors.disabledCard : theme.colors.selectTopicBg};
+border: ${({ active, theme }) =>
     active
       ? `2px solid ${theme.colors.themeColor}`
       : `1px solid ${theme.colors.disabledButton}`};
-  transition: background-color 0.4s ease-out;
-  border-radius: 10px;
-  padding: 14px 10px;
-  display: flex;
-  align-items: center;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  @media ${device.md} {
-    padding: 10px;
-    tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: transparent;
-  }
-    height: 14px
-    weight: 14px
+transition: background-color 0.3s ease-out, transform 0.2s ease-out;
+border-radius: 10px;
+padding: 14px 10px;
+display: flex;
+align-items: center;
+cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+box-shadow: ${({ active }) =>
+    active ? '0px 4px 10px rgba(0, 0, 0, 0.2)' : 'none'};
+&:hover {
+  background: ${({ theme, disabled }) =>
+    disabled ? theme.colors.disabledCard : theme.colors.themeColorLight};
+  transform: ${({ disabled }) => (disabled ? 'none' : 'scale(1.05)')};
+}
+@media ${device.md} {
+  padding: 10px;
+}
 `
 
 const SelectButtonText = styled.span`
   font-size: 18px;
   font-weight: 600;
   margin-left: 10px;
+  color: #333;
   @media ${device.md} {
     font-size: 16px;
     font-weight: 500;
   }
 `
+
 
 const QuizTopicsScreen: React.FC = () => {
   const { quizTopic, selectQuizTopic, setCurrentScreen } = useQuiz()

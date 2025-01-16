@@ -31,6 +31,8 @@ export interface Theme {
     dark: string
     darkGray: string
     darkerGray: string
+    themeColorLight: string
+    text: string
   }
   fonts: {
     anekMalayalam: string
@@ -48,5 +50,5 @@ export interface Theme {
 }
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
+  export interface DefaultTheme extends Theme { }
 }
