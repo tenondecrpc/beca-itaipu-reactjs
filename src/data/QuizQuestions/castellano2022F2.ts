@@ -66,7 +66,7 @@ export const castellano2022F2: Topic = {
       question: '(25) Uno de los aportes de Cándido Bareiro al patrimonio cultural intangible del Paraguay fue:',
       code: propulsor,
       choices: [
-        'In becado a estudiar en Gran Bretaña', 
+        'Ir becado a estudiar en Gran Bretaña', 
         'Ser uno de los presidentes del Paraguay', 
         'Ser uno de los mejores en el aula de Filosofía', 
         'Contribuir a la historiografía paraguaya'
