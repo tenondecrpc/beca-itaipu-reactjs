@@ -9,11 +9,11 @@ type QuizTopic = {
 
 export const quizTopics: QuizTopic[] = [
   {
-    title: 'Castellano 2022 F1 01',
+    title: 'Castellano 2022 F1',
     icon: <BecaIcon />,
   },
   {
-    title: 'Castellano 2022 F1 02',
+    title: 'Castellano 2022 F2',
     icon: <BecaIcon />,
   },
 ]

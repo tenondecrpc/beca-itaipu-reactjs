@@ -1,5 +1,5 @@
-import { castellano2022F101 } from './castellano2022F101'
-import { castellano2022F102 } from './castellano2022F102'
+import { castellano2022F1 } from './castellano2022F1'
+import { castellano2022F2 } from './castellano2022F2'
 
 // Question Types
 // 1. MCQs | Multiple Choice | single
@@ -29,6 +29,6 @@ export type Topic = {
 }
 
 export const quiz: Record<string, Topic> = {
-  'Castellano 2022 F1 01': castellano2022F101,
-  'Castellano 2022 F1 02': castellano2022F102
+  'Castellano 2022 F1': castellano2022F1,
+  'Castellano 2022 F2': castellano2022F2
 }
