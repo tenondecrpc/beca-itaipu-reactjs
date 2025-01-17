@@ -5,9 +5,9 @@ Narrador y poeta paraguayo, sin duda el escritor de su país más
 importante del siglo XX y uno de los grandes novelistas de la 
 literatura hispanoamericana. Pasó su niñez en el pueblo de Iturbe, 
 lugar que le sirvió de inspiración para muchas de sus creaciones. 
-En 1932 se escapó de su casa para allstarse en el ejército durante 
+En 1932 se escapó de su casa para alistarse en el ejército durante 
 la guerra del Chaco. Esos años, durante los que permaneció en la 
-retaguardia, fue crucial al proporcionarle anécdotas y vivencias 
+retaguardia, fueron cruciales al proporcionarle anécdotas y vivencias 
 que alimentarían su literatura.
 
 Desde 1936 trabajó en Asunción como periodista para El País, del 

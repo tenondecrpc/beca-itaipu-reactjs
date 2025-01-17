@@ -189,7 +189,7 @@ const ResultScreen: FC = () => {
         <Button
           text="REINTENTAR"
           onClick={onClickRetry}
-          icon={<Refresh />}
+          // icon={<Refresh />}
           iconPosition="left"
           bold
         />
