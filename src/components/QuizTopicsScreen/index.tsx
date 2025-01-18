@@ -158,7 +158,9 @@ const QuizTopicsScreen: React.FC = () => {
         <DetailItem>
           <DetailText>
             <DetailText>Colaboradores:</DetailText>
-            Este proyecto fue desarrollado por <strong>Wildo Fariña</strong> y <strong>Cristian Paniagua</strong> como un aporte comunitario.
+            Este proyecto fue desarrollado por <strong>Wildo Fariña</strong> y 
+            <strong><a href="https://www.instagram.com/tenondev_/" target="_blank" rel="noreferrer">Cristian Paniagua</a></strong> 
+            como un aporte comunitario.
           </DetailText>
         </DetailItem>
       </DetailTextContainer>
