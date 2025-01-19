@@ -18,11 +18,52 @@ const CodeSnippet: React.FC<CodeSnippetProps> = ({ code, language }) => {
   }, [code])
 
   return (
-    <pre className={`language-${language}`}>
-      <code className={`language-${language}`} ref={codeRef}>
-        {code}
-      </code>
-    </pre>
+    <div style={{ maxWidth: '100%', overflowX: 'hidden' }}>
+      <pre
+        className={`language-${language}`}
+        style={{
+          whiteSpace: 'pre-wrap',
+          wordWrap: 'break-word',
+          overflowX: 'auto',
+          maxWidth: '100%',
+          boxSizing: 'border-box',
+          padding: '1rem',
+          fontSize: '1rem',
+        }}
+      >
+        <code
+          style={{
+            display: 'block',
+            fontFamily: "'Courier New', Courier, monospace",
+            lineHeight: '1.5',
+          }}
+        >
+          {code}
+        </code>
+      </pre>
+      <style>
+        {`
+          @media (max-width: 768px) {
+            pre {
+              padding: 0.75rem;
+              font-size: 0.9rem;
+            }
+            code {
+              font-size: 0.9rem;
+            }
+          }
+          @media (max-width: 480px) {
+            pre {
+              padding: 0.5rem;
+              font-size: 0.8rem;
+            }
+            code {
+              font-size: 0.8rem;
+            }
+          }
+        `}
+      </style>
+    </div>
   )
 }
 
