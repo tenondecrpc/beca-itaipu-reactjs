@@ -160,11 +160,11 @@ const QuizTopicsScreen: React.FC = () => {
             <DetailText>Colaboradores:</DetailText>
             Este proyecto fue desarrollado por
             <strong>
-              <a href="https://www.instagram.com/wildodevpy/" target="_blank" rel="noreferrer">Wildo Fariña</a>
+              <a href="https://www.instagram.com/wildodevpy/" target="_blank" rel="noreferrer"> Wildo Fariña </a>
             </strong>
             y
             <strong>
-              <a href="https://www.instagram.com/tenondev_/" target="_blank" rel="noreferrer">Cristian Paniagua</a>
+              <a href="https://www.instagram.com/tenondev_/" target="_blank" rel="noreferrer"> Cristian Paniagua </a>
             </strong>
             como un aporte comunitario.
           </DetailText>
